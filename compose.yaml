@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+  flask_app:
+    container_name: flask_app
+    restart: always
+    build: .
+    ports:
+      - "5000:5000"
+    env_file: ./.env
+    depends_on:
+      - flask_db
+  flask_db:
+    container_name: flask_db
+    restart: always
+    image: postgres:16.1
+    ports:
+      - "5432:5432"
+    env_file: ./.env
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata: {}
