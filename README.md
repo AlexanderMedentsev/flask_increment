@@ -14,7 +14,7 @@
 
 Клонировать репозиторий:
 
-	https://github.com/AlexanderMedentsev/flask_increment.git
+	git clone https://github.com/AlexanderMedentsev/flask_increment.git
 
 Перейти в директорию:
 
